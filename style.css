@@ -1,0 +1,558 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Gilroy', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
+}
+
+html,
+body {
+    width: 100%;
+    min-height: 100vh;
+    background-color: #fff;
+    overflow-x: hidden;
+}
+
+/* Navbar */
+nav {
+    height: 80px;
+    width: 100%;
+    max-width: 1300px;
+    margin: 0 auto;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 30px;
+    background-color: #fff;
+}
+
+nav .nav-part1 {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    cursor: pointer;
+    flex-shrink: 0;
+}
+
+nav .nav-part1 .logo-icon {
+    width: 32px;
+    height: 32px;
+    fill: #000;
+    transform: rotate(45deg);
+    flex-shrink: 0;
+}
+
+nav .nav-part1 h1 {
+    font-size: 26px;
+    font-weight: 700;
+    letter-spacing: -0.5px;
+    color: #000;
+    line-height: 1;
+    display: flex;
+    align-items: center;
+}
+
+nav .nav-part2 {
+    display: flex;
+    align-items: center;
+    gap: 24px;
+    flex-shrink: 0;
+}
+
+nav .nav-part2 h4 a {
+    text-decoration: none;
+    color: #111;
+    font-size: 15px;
+    font-weight: 500;
+    transition: opacity 0.2s ease;
+    white-space: nowrap;
+}
+
+nav .nav-part2 h4 a:hover {
+    opacity: 0.6;
+}
+
+nav .nav-part2 button {
+    padding: 10px 20px;
+    font-size: 15px;
+    font-weight: 500;
+    background: transparent;
+    color: #111;
+    border: 1px solid #111;
+    border-radius: 8px;
+    cursor: pointer;
+    white-space: nowrap;
+    flex-shrink: 0;
+    transition: all 0.25s ease;
+}
+
+nav .nav-part2 button:hover {
+    background-color: #111;
+    color: #fff;
+}
+
+/* Hero / Center Section */
+.center {
+    width: 100%;
+    max-width: 1300px;
+    margin: 0 auto;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 20px 30px 40px 30px;
+    gap: 80px;
+}
+
+.center-part1 {
+    flex: 1.1;
+    max-width: 520px;
+}
+
+.center-part1 h1 {
+    font-size: 46px;
+    font-weight: 700;
+    line-height: 1.15;
+    letter-spacing: -0.5px;
+    color: #000;
+}
+
+.center-part1 p {
+    font-size: 15px;
+    line-height: 1.55;
+    margin: 18px 0 24px 0;
+    color: #222;
+    max-width: 450px;
+}
+
+.center-part1 button {
+    display: inline-block;
+    padding: 15px 32px;
+    font-size: 16px;
+    font-weight: 500;
+    background-color: #191A23;
+    color: #ffffff;
+    border: none;
+    border-radius: 10px;
+    cursor: pointer;
+    transition: all 0.25s ease;
+}
+
+.center-part1 button:hover {
+    background-color: #000;
+    transform: translateY(-2px);
+    box-shadow: 0 6px 16px rgba(0, 0, 0, 0.15);
+}
+
+.center-part2 {
+    flex: 1;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+}
+
+.center-part2 img {
+    width: 100%;
+    max-width: 520px;
+    height: auto;
+    object-fit: contain;
+    display: block;
+}
+
+/* Brand Partners Section (Infinite Marquee) */
+.section1bottom {
+    width: 100%;
+    max-width: 1300px;
+    margin: 0 auto;
+    overflow: hidden;
+    padding: 35px 30px 65px 30px;
+    position: relative;
+}
+
+.marquee-track {
+    display: flex;
+    align-items: center;
+    gap: 80px;
+    width: max-content;
+    will-change: transform;
+}
+
+.marquee-track img {
+    height: 50px;
+    width: auto;
+    max-width: 175px;
+    object-fit: contain;
+    cursor: pointer;
+    flex-shrink: 0;
+    mix-blend-mode: multiply;
+    transition: transform 0.3s ease;
+}
+
+.marquee-track img:hover {
+    transform: scale(1.12);
+}
+
+/* Common Section Title */
+.section-title {
+    display: flex;
+    align-items: center;
+    gap: 40px;
+    margin-bottom: 60px;
+}
+
+.section-title h3 {
+    background-color: #B9FF66;
+    color: #000;
+    font-size: 34px;
+    font-weight: 700;
+    padding: 3px 12px;
+    border-radius: 8px;
+    display: inline-block;
+    line-height: 1.2;
+    flex-shrink: 0;
+}
+
+.section-title p {
+    font-size: 16px;
+    line-height: 1.5;
+    color: #222;
+    max-width: 580px;
+}
+
+/* Services Section */
+.services-section {
+    width: 100%;
+    max-width: 1300px;
+    margin: 40px auto 80px auto;
+    padding: 0 30px;
+}
+
+.services-container {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 35px;
+    perspective: 1200px;
+}
+
+.card {
+    border: 1px solid #191A23;
+    border-radius: 40px;
+    padding: 45px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    box-shadow: 0 6px 0 #191A23;
+    position: relative;
+    overflow: hidden;
+    transform-style: preserve-3d;
+    will-change: transform, box-shadow;
+    cursor: pointer;
+    transition: box-shadow 0.3s ease;
+}
+
+.card:hover {
+    box-shadow: 0 12px 0 #191A23;
+}
+
+.card-light {
+    background-color: #F3F3F3;
+    color: #000;
+}
+
+.card-dark {
+    background-color: #191A23;
+    color: #fff;
+}
+
+.card-left {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    height: 100%;
+    min-height: 190px;
+}
+
+.tag-green {
+    background-color: #B9FF66;
+    color: #000;
+    font-size: 26px;
+    font-weight: 700;
+    padding: 2px 10px;
+    border-radius: 6px;
+    display: inline-block;
+    margin-bottom: 4px;
+    line-height: 1.25;
+}
+
+.tag-white {
+    background-color: #fff;
+    color: #000;
+    font-size: 26px;
+    font-weight: 700;
+    padding: 2px 10px;
+    border-radius: 6px;
+    display: inline-block;
+    margin-bottom: 4px;
+    line-height: 1.25;
+}
+
+.card-link {
+    display: inline-flex;
+    align-items: center;
+    gap: 14px;
+    cursor: pointer;
+    text-decoration: none;
+    font-size: 18px;
+    font-weight: 500;
+}
+
+.card-light .card-link {
+    color: #000;
+}
+
+.card-dark .card-link {
+    color: #fff;
+}
+
+.circle-icon {
+    width: 42px;
+    height: 42px;
+    border-radius: 50%;
+    background-color: #191A23;
+    color: #B9FF66;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 22px;
+    transition: transform 0.3s ease;
+}
+
+.circle-white {
+    background-color: #fff;
+    color: #191A23;
+}
+
+.card:hover .circle-icon {
+    transform: rotate(45deg);
+}
+
+.card-right {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-shrink: 0;
+}
+
+/* Call to Action Banner */
+.cta-banner {
+    width: 100%;
+    max-width: 1300px;
+    margin: 80px auto;
+    background-color: #F3F3F3;
+    border-radius: 40px;
+    padding: 55px 70px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    position: relative;
+    overflow: hidden;
+    gap: 40px;
+}
+
+.cta-content {
+    max-width: 500px;
+}
+
+.cta-content h2 {
+    font-size: 32px;
+    font-weight: 700;
+    color: #000;
+    margin-bottom: 18px;
+    letter-spacing: -0.5px;
+}
+
+.cta-content p {
+    font-size: 16px;
+    line-height: 1.6;
+    color: #222;
+    margin-bottom: 26px;
+}
+
+.cta-content button {
+    padding: 18px 36px;
+    font-size: 16px;
+    font-weight: 500;
+    background-color: #191A23;
+    color: #fff;
+    border: none;
+    border-radius: 12px;
+    cursor: pointer;
+    transition: all 0.25s ease;
+}
+
+.cta-content button:hover {
+    background-color: #000;
+    transform: translateY(-2px);
+    box-shadow: 0 6px 16px rgba(0, 0, 0, 0.15);
+}
+
+.cta-illustration {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-shrink: 0;
+}
+
+/* Case Studies Section */
+.case-studies-section {
+    width: 100%;
+    max-width: 1300px;
+    margin: 60px auto 100px auto;
+    padding: 0 30px;
+}
+
+.case-studies-container {
+    background-color: #191A23;
+    border-radius: 40px;
+    padding: 60px 55px;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    color: #fff;
+}
+
+.case-card {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    min-height: 170px;
+}
+
+.case-card:not(:last-child) {
+    padding-right: 50px;
+    border-right: 1px solid rgba(255, 255, 255, 0.25);
+}
+
+.case-card:not(:first-child) {
+    padding-left: 50px;
+}
+
+.case-card p {
+    font-size: 15px;
+    line-height: 1.65;
+    color: rgba(255, 255, 255, 0.85);
+    margin-bottom: 20px;
+}
+
+.case-card a {
+    color: #B9FF66;
+    text-decoration: none;
+    font-size: 17px;
+    font-weight: 500;
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    transition: gap 0.25s ease;
+}
+
+.case-card a:hover {
+    gap: 12px;
+}
+
+/* Responsive adjustments */
+@media (max-width: 900px) {
+    nav {
+        padding: 0 20px;
+    }
+
+    nav .nav-part2 {
+        gap: 14px;
+    }
+
+    nav .nav-part2 h4 {
+        display: none;
+    }
+
+    .center {
+        flex-direction: column-reverse;
+        padding: 20px 20px 40px 20px;
+        gap: 25px;
+    }
+
+    .center-part1,
+    .center-part2 {
+        width: 100%;
+        max-width: 100%;
+    }
+
+    .center-part1 h1 {
+        font-size: 34px;
+    }
+
+    .center-part2 {
+        justify-content: center;
+    }
+
+    .center-part2 img {
+        max-width: 380px;
+    }
+
+    .section1bottom {
+        padding: 25px 20px 45px 20px;
+    }
+
+    .section-title {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 18px;
+        margin-bottom: 35px;
+    }
+
+    .services-section,
+    .case-studies-section {
+        padding: 0 20px;
+    }
+
+    .services-container {
+        grid-template-columns: 1fr;
+        gap: 25px;
+    }
+
+    .card {
+        padding: 30px;
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 25px;
+    }
+
+    .card-right {
+        align-self: center;
+    }
+
+    .cta-banner {
+        flex-direction: column-reverse;
+        padding: 40px 30px;
+        margin: 50px auto;
+        gap: 30px;
+        text-align: center;
+    }
+
+    .cta-content {
+        max-width: 100%;
+    }
+
+    .case-studies-container {
+        grid-template-columns: 1fr;
+        padding: 40px 30px;
+        gap: 30px;
+    }
+
+    .case-card:not(:last-child) {
+        border-right: none;
+        border-bottom: 1px solid rgba(255, 255, 255, 0.25);
+        padding-right: 0;
+        padding-bottom: 30px;
+    }
+
+    .case-card:not(:first-child) {
+        padding-left: 0;
+    }
+}
